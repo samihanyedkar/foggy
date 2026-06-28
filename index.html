@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Foggy</title>
+
+  <!-- MapLibre GL: the free, open-source map engine that draws everything. -->
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
+  <style>
+    html, body { margin: 0; height: 100%; font-family: -apple-system, system-ui, sans-serif; }
+    #map { position: absolute; inset: 0; }
+    .panel {
+      position: absolute; z-index: 1; top: 12px; left: 12px;
+      background: rgba(255,255,255,0.92); border-radius: 12px;
+      padding: 12px 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); max-width: 220px;
+    }
+    .panel h1 { font-size: 16px; margin: 0 0 2px; }
+    .panel .updated { font-size: 11px; color: #666; margin-bottom: 8px; }
+    .legend { display: flex; align-items: center; font-size: 11px; color: #444; gap: 6px; }
+    .legend .bar {
+      height: 10px; flex: 1; border-radius: 5px;
+      background: linear-gradient(to right, #2b6cff, #69c0ff, #d9d9d9, #ffd166, #fff3b0);
+    }
+    .maplibregl-popup-content { font-size: 12px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <h1>Foggy</h1>
+    <div class="updated" id="updated">loading…</div>
+    <div class="legend"><span>foggy</span><span class="bar"></span><span>clear</span></div>
+  </div>
+  <div id="map"></div>
+
+  <script>
+    // --- 1. Create the map, centered on San Francisco ---
+    const map = new maplibregl.Map({
+      container: "map",
+      // A free, no-API-key basemap style (clean light "Positron" look).
+      style: {
+        version: 8,
+        sources: {
+          carto: {
+            type: "raster",
+            tiles: ["https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png"],
+            tileSize: 256,
+            attribution: "© OpenStreetMap, © CARTO",
+          },
+        },
+        layers: [{ id: "carto", type: "raster", source: "carto" }],
+      },
+      center: [-122.447, 37.76],
+      zoom: 11.6,
+    });
+
+    // Reverse the score so the heatmap reads "blue = foggy".
+    // (MapLibre's default heatmap ramp is cold->hot; we want cold=fog.)
+    function toGeoJSON(points) {
+      return {
+        type: "FeatureCollection",
+        features: points.map((p) => ({
+          type: "Feature",
+          geometry: { type: "Point", coordinates: [p.lon, p.lat] },
+          properties: p,
+        })),
+      };
+    }
+
+    // --- 2. Load the fog data and draw it ---
+    async function load() {
+      let data;
+      try {
+        // Cache-bust so you always see the freshest fog.json.
+        const res = await fetch("data/fog.json?t=" + Date.now());
+        data = await res.json();
+      } catch (e) {
+        document.getElementById("updated").textContent =
+          "Could not load data/fog.json — run a local server (see the guide).";
+        return;
+      }
+
+      const when = new Date(data.updated_at);
+      document.getElementById("updated").textContent =
+        (data.source === "sample-data" ? "SAMPLE data · " : "") +
+        "updated " + when.toLocaleString();
+
+      const geo = toGeoJSON(data.points);
+      const src = map.getSource("fog");
+      if (src) { src.setData(geo); return; }
+
+      map.addSource("fog", { type: "geojson", data: geo });
+
+      // The smooth blanket: a heatmap weighted by each point's fog_score.
+      map.addLayer({
+        id: "fog-heat",
+        type: "heatmap",
+        source: "fog",
+        paint: {
+          "heatmap-weight": ["get", "fog_score"],
+          "heatmap-intensity": 1.1,
+          "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 10, 40, 14, 110],
+          "heatmap-opacity": 0.65,
+          // Cold blue (fog) -> transparent (clear).
+          "heatmap-color": [
+            "interpolate", ["linear"], ["heatmap-density"],
+            0,   "rgba(43,108,255,0)",
+            0.2, "rgba(105,192,255,0.5)",
+            0.5, "rgba(150,180,220,0.7)",
+            1,   "rgba(60,90,160,0.85)",
+          ],
+        },
+      });
+
+      // Clickable dots so you can inspect each neighborhood's numbers.
+      map.addLayer({
+        id: "fog-points",
+        type: "circle",
+        source: "fog",
+        paint: {
+          "circle-radius": 6,
+          "circle-stroke-width": 1.5,
+          "circle-stroke-color": "#fff",
+          "circle-color": [
+            "interpolate", ["linear"], ["get", "fog_score"],
+            0, "#ffe08a", 0.5, "#c8c8c8", 1, "#2b6cff",
+          ],
+        },
+      });
+
+      map.on("click", "fog-points", (e) => {
+        const p = e.features[0].properties;
+        new maplibregl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(
+            `<b>${p.name}</b><br>` +
+            `Fog score: <b>${(+p.fog_score).toFixed(2)}</b><br>` +
+            `Visibility: ${(p.visibility_m / 1000).toFixed(1)} km<br>` +
+            `Humidity: ${p.humidity}% · Cloud: ${p.cloud_cover}%`
+          )
+          .addTo(map);
+      });
+      map.on("mouseenter", "fog-points", () => (map.getCanvas().style.cursor = "pointer"));
+      map.on("mouseleave", "fog-points", () => (map.getCanvas().style.cursor = ""));
+    }
+
+    map.on("load", load);
+    // Auto-refresh every 10 minutes so the map keeps itself current.
+    setInterval(load, 10 * 60 * 1000);
+  </script>
+</body>
+</html>

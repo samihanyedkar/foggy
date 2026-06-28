@@ -1,0 +1,45 @@
+# update-fog.yml
+#
+# This GitHub Action runs fetch_fog.py on a schedule, then commits the
+# updated fog.json back to the repo. Because the map page is hosted on
+# GitHub Pages (which serves straight from this repo), the live map
+# gets fresh data automatically — no server needed.
+#
+# Schedule: every 10 minutes. GitHub's minimum is 5 minutes, but 10 is
+# enough given the map also re-fetches client-side every 10 minutes.
+# Note: GitHub may delay scheduled runs by a few minutes under load.
+
+name: Foggy — update fog data
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 minutes, all day
+  workflow_dispatch:           # lets you trigger a run manually from the Actions tab
+
+permissions:
+  contents: write   # needed so the job can git push back to the repo
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch fog data
+        run: python3 data/fetch_fog.py
+
+      - name: Commit updated fog.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/fog.json
+          # Only commit if fog.json actually changed (avoids empty commits).
+          git diff --cached --quiet || git commit -m "chore: update fog data [skip ci]"
+          git push
