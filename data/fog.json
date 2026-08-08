@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T07:31:06+0000",
+  "updated_at": "2026-08-08T08:20:09+0000",
   "source": "open-meteo",
   "points": [
     {
@@ -11,8 +11,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.1,
-      "dew_point": 13.1
+      "temperature": 13.0,
+      "dew_point": 13.0
     },
     {
       "id": "inner_sunset",
@@ -23,8 +23,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 12.9,
-      "dew_point": 12.9
+      "temperature": 12.8,
+      "dew_point": 12.8
     },
     {
       "id": "outer_richmond",
@@ -35,8 +35,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.1,
-      "dew_point": 13.1
+      "temperature": 13.0,
+      "dew_point": 13.0
     },
     {
       "id": "inner_richmond",
@@ -59,8 +59,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.5,
-      "dew_point": 13.5
+      "temperature": 13.4,
+      "dew_point": 13.4
     },
     {
       "id": "lands_end",
@@ -71,8 +71,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.0,
-      "dew_point": 13.0
+      "temperature": 12.9,
+      "dew_point": 12.9
     },
     {
       "id": "golden_gate_park",
@@ -83,8 +83,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.1,
-      "dew_point": 13.1
+      "temperature": 13.0,
+      "dew_point": 13.0
     },
     {
       "id": "presidio",
@@ -111,16 +111,16 @@
       "dew_point": 13.6
     },
     {
-      "id": "haight",
-      "name": "Haight-Ashbury",
-      "lat": 37.77,
-      "lon": -122.4469,
+      "id": "twin_peaks",
+      "name": "Twin Peaks",
+      "lat": 37.7544,
+      "lon": -122.4477,
       "fog_score": 1.0,
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.1,
-      "dew_point": 13.1
+      "temperature": 12.0,
+      "dew_point": 12.0
     },
     {
       "id": "castro",
@@ -131,8 +131,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.4,
-      "dew_point": 13.4
+      "temperature": 13.2,
+      "dew_point": 13.2
     },
     {
       "id": "noe_valley",
@@ -143,8 +143,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.3,
-      "dew_point": 13.3
+      "temperature": 13.1,
+      "dew_point": 13.1
     },
     {
       "id": "mission",
@@ -155,8 +155,8 @@
       "visibility_m": 100.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.6,
-      "dew_point": 13.6
+      "temperature": 13.5,
+      "dew_point": 13.5
     },
     {
       "id": "glen_park",
@@ -167,8 +167,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.2,
-      "dew_point": 13.2
+      "temperature": 13.1,
+      "dew_point": 13.1
     },
     {
       "id": "bernal_heights",
@@ -176,7 +176,7 @@
       "lat": 37.739,
       "lon": -122.4159,
       "fog_score": 1.0,
-      "visibility_m": 100.0,
+      "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
       "temperature": 13.1,
@@ -191,8 +191,8 @@
       "visibility_m": 100.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.1,
-      "dew_point": 13.1
+      "temperature": 13.0,
+      "dew_point": 13.0
     },
     {
       "id": "soma",
@@ -203,8 +203,8 @@
       "visibility_m": 100.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.6,
-      "dew_point": 13.6
+      "temperature": 13.5,
+      "dew_point": 13.5
     },
     {
       "id": "financial",
@@ -219,40 +219,40 @@
       "dew_point": 13.6
     },
     {
+      "id": "north_beach",
+      "name": "North Beach",
+      "lat": 37.806,
+      "lon": -122.4103,
+      "fog_score": 1.0,
+      "visibility_m": 100.0,
+      "cloud_cover": 100,
+      "humidity": 100,
+      "temperature": 13.6,
+      "dew_point": 13.6
+    },
+    {
       "id": "bayview",
       "name": "Bayview",
       "lat": 37.7299,
       "lon": -122.389,
       "fog_score": 1.0,
-      "visibility_m": 100.0,
+      "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
       "temperature": 13.4,
       "dew_point": 13.4
     },
     {
-      "id": "excelsior",
-      "name": "Excelsior",
-      "lat": 37.7244,
-      "lon": -122.4244,
-      "fog_score": 1.0,
-      "visibility_m": 0.0,
-      "cloud_cover": 100,
-      "humidity": 100,
-      "temperature": 12.7,
-      "dew_point": 12.7
-    },
-    {
       "id": "lake_merced",
       "name": "Lake Merced",
       "lat": 37.728,
       "lon": -122.49,
-      "fog_score": 0.985,
+      "fog_score": 1.0,
       "visibility_m": 0.0,
       "cloud_cover": 100,
-      "humidity": 99,
-      "temperature": 13.4,
-      "dew_point": 13.2
+      "humidity": 100,
+      "temperature": 13.3,
+      "dew_point": 13.3
     }
   ]
 }
