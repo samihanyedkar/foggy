@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T13:33:40+0000",
+  "updated_at": "2026-08-19T14:16:53+0000",
   "source": "open-meteo",
   "points": [
     {
@@ -11,8 +11,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.0,
-      "dew_point": 13.0
+      "temperature": 13.1,
+      "dew_point": 13.1
     },
     {
       "id": "inner_sunset",
@@ -23,8 +23,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 12.8,
-      "dew_point": 12.8
+      "temperature": 12.9,
+      "dew_point": 12.9
     },
     {
       "id": "outer_richmond",
@@ -47,8 +47,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.0,
-      "dew_point": 13.0
+      "temperature": 13.1,
+      "dew_point": 13.1
     },
     {
       "id": "ocean_beach",
@@ -95,8 +95,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.1,
-      "dew_point": 13.1
+      "temperature": 13.2,
+      "dew_point": 13.2
     },
     {
       "id": "marina",
@@ -107,20 +107,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.4,
-      "dew_point": 13.4
-    },
-    {
-      "id": "twin_peaks",
-      "name": "Twin Peaks",
-      "lat": 37.7544,
-      "lon": -122.4477,
-      "fog_score": 1.0,
-      "visibility_m": 0.0,
-      "cloud_cover": 100,
-      "humidity": 100,
-      "temperature": 11.9,
-      "dew_point": 11.9
+      "temperature": 13.5,
+      "dew_point": 13.5
     },
     {
       "id": "haight",
@@ -147,6 +135,18 @@
       "dew_point": 13.2
     },
     {
+      "id": "noe_valley",
+      "name": "Noe Valley",
+      "lat": 37.7502,
+      "lon": -122.4337,
+      "fog_score": 1.0,
+      "visibility_m": 0.0,
+      "cloud_cover": 100,
+      "humidity": 100,
+      "temperature": 13.1,
+      "dew_point": 13.1
+    },
+    {
       "id": "mission",
       "name": "Mission",
       "lat": 37.7599,
@@ -167,8 +167,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.1,
-      "dew_point": 13.1
+      "temperature": 13.2,
+      "dew_point": 13.2
     },
     {
       "id": "bernal_heights",
@@ -176,11 +176,11 @@
       "lat": 37.739,
       "lon": -122.4159,
       "fog_score": 1.0,
-      "visibility_m": 100.0,
+      "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.0,
-      "dew_point": 13.0
+      "temperature": 13.1,
+      "dew_point": 13.1
     },
     {
       "id": "potrero_hill",
@@ -215,8 +215,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.4,
-      "dew_point": 13.4
+      "temperature": 13.5,
+      "dew_point": 13.5
     },
     {
       "id": "north_beach",
@@ -227,8 +227,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.4,
-      "dew_point": 13.4
+      "temperature": 13.5,
+      "dew_point": 13.5
     },
     {
       "id": "bayview",
@@ -236,23 +236,11 @@
       "lat": 37.7299,
       "lon": -122.389,
       "fog_score": 1.0,
-      "visibility_m": 100.0,
-      "cloud_cover": 100,
-      "humidity": 100,
-      "temperature": 13.3,
-      "dew_point": 13.3
-    },
-    {
-      "id": "excelsior",
-      "name": "Excelsior",
-      "lat": 37.7244,
-      "lon": -122.4244,
-      "fog_score": 1.0,
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 12.6,
-      "dew_point": 12.6
+      "temperature": 13.4,
+      "dew_point": 13.4
     },
     {
       "id": "lake_merced",
@@ -263,8 +251,8 @@
       "visibility_m": 0.0,
       "cloud_cover": 100,
       "humidity": 100,
-      "temperature": 13.3,
-      "dew_point": 13.3
+      "temperature": 13.4,
+      "dew_point": 13.4
     }
   ]
 }
