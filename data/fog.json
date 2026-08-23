@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T23:22:20+0000",
+  "updated_at": "2026-08-23T23:46:51+0000",
   "source": "open-meteo",
   "points": [
     {
@@ -7,11 +7,11 @@
       "name": "Outer Sunset",
       "lat": 37.7558,
       "lon": -122.4946,
-      "fog_score": 0.135,
-      "visibility_m": 12200.0,
-      "cloud_cover": 88,
-      "humidity": 88,
-      "temperature": 17.6,
+      "fog_score": 0.18,
+      "visibility_m": 12500.0,
+      "cloud_cover": 100,
+      "humidity": 91,
+      "temperature": 17.0,
       "dew_point": 15.6
     },
     {
@@ -19,11 +19,11 @@
       "name": "Inner Sunset",
       "lat": 37.76,
       "lon": -122.4686,
-      "fog_score": 0.135,
-      "visibility_m": 12200.0,
-      "cloud_cover": 88,
-      "humidity": 88,
-      "temperature": 17.4,
+      "fog_score": 0.18,
+      "visibility_m": 12500.0,
+      "cloud_cover": 100,
+      "humidity": 91,
+      "temperature": 16.8,
       "dew_point": 15.4
     },
     {
@@ -31,72 +31,72 @@
       "name": "Outer Richmond",
       "lat": 37.777,
       "lon": -122.4953,
-      "fog_score": 0.176,
-      "visibility_m": 10900.0,
-      "cloud_cover": 92,
-      "humidity": 91,
-      "temperature": 17.2,
-      "dew_point": 15.7
+      "fog_score": 0.206,
+      "visibility_m": 12200.0,
+      "cloud_cover": 100,
+      "humidity": 93,
+      "temperature": 16.3,
+      "dew_point": 15.2
     },
     {
       "id": "inner_richmond",
       "name": "Inner Richmond",
       "lat": 37.78,
       "lon": -122.4644,
-      "fog_score": 0.019,
-      "visibility_m": 15200.0,
-      "cloud_cover": 91,
-      "humidity": 80,
-      "temperature": 18.8,
-      "dew_point": 15.3
+      "fog_score": 0.034,
+      "visibility_m": 16200.0,
+      "cloud_cover": 100,
+      "humidity": 81,
+      "temperature": 18.5,
+      "dew_point": 15.2
     },
     {
       "id": "ocean_beach",
       "name": "Ocean Beach",
       "lat": 37.7594,
       "lon": -122.5107,
-      "fog_score": 0.176,
-      "visibility_m": 10900.0,
-      "cloud_cover": 92,
-      "humidity": 91,
-      "temperature": 17.6,
-      "dew_point": 16.1
+      "fog_score": 0.206,
+      "visibility_m": 12200.0,
+      "cloud_cover": 100,
+      "humidity": 93,
+      "temperature": 16.7,
+      "dew_point": 15.6
     },
     {
       "id": "lands_end",
       "name": "Lands End",
       "lat": 37.7836,
       "lon": -122.5057,
-      "fog_score": 0.176,
-      "visibility_m": 10900.0,
-      "cloud_cover": 92,
-      "humidity": 91,
-      "temperature": 17.1,
-      "dew_point": 15.6
+      "fog_score": 0.206,
+      "visibility_m": 12200.0,
+      "cloud_cover": 100,
+      "humidity": 93,
+      "temperature": 16.2,
+      "dew_point": 15.1
     },
     {
       "id": "golden_gate_park",
       "name": "Golden Gate Park",
       "lat": 37.7694,
       "lon": -122.4862,
-      "fog_score": 0.176,
-      "visibility_m": 10900.0,
-      "cloud_cover": 92,
-      "humidity": 91,
-      "temperature": 17.2,
-      "dew_point": 15.7
+      "fog_score": 0.206,
+      "visibility_m": 12200.0,
+      "cloud_cover": 100,
+      "humidity": 93,
+      "temperature": 16.3,
+      "dew_point": 15.2
     },
     {
       "id": "presidio",
       "name": "Presidio",
       "lat": 37.7989,
       "lon": -122.4662,
-      "fog_score": 0.019,
-      "visibility_m": 15200.0,
-      "cloud_cover": 91,
-      "humidity": 80,
-      "temperature": 18.9,
-      "dew_point": 15.4
+      "fog_score": 0.03,
+      "visibility_m": 16200.0,
+      "cloud_cover": 100,
+      "humidity": 81,
+      "temperature": 18.6,
+      "dew_point": 15.2
     },
     {
       "id": "marina",
@@ -104,11 +104,11 @@
       "lat": 37.803,
       "lon": -122.4368,
       "fog_score": 0.0,
-      "visibility_m": 22600.0,
-      "cloud_cover": 97,
-      "humidity": 66,
-      "temperature": 21.5,
-      "dew_point": 14.9
+      "visibility_m": 23800.0,
+      "cloud_cover": 100,
+      "humidity": 67,
+      "temperature": 20.8,
+      "dew_point": 14.4
     },
     {
       "id": "twin_peaks",
@@ -116,11 +116,11 @@
       "lat": 37.7544,
       "lon": -122.4477,
       "fog_score": 0.0,
-      "visibility_m": 19000.0,
-      "cloud_cover": 91,
+      "visibility_m": 20200.0,
+      "cloud_cover": 100,
       "humidity": 73,
-      "temperature": 18.7,
-      "dew_point": 13.8
+      "temperature": 18.2,
+      "dew_point": 13.3
     },
     {
       "id": "castro",
@@ -128,11 +128,11 @@
       "lat": 37.7609,
       "lon": -122.435,
       "fog_score": 0.0,
-      "visibility_m": 19000.0,
-      "cloud_cover": 91,
+      "visibility_m": 20200.0,
+      "cloud_cover": 100,
       "humidity": 73,
-      "temperature": 20.0,
-      "dew_point": 15.0
+      "temperature": 19.5,
+      "dew_point": 14.5
     },
     {
       "id": "noe_valley",
@@ -140,11 +140,11 @@
       "lat": 37.7502,
       "lon": -122.4337,
       "fog_score": 0.0,
-      "visibility_m": 19000.0,
-      "cloud_cover": 91,
+      "visibility_m": 20200.0,
+      "cloud_cover": 100,
       "humidity": 73,
-      "temperature": 19.9,
-      "dew_point": 14.9
+      "temperature": 19.4,
+      "dew_point": 14.4
     },
     {
       "id": "mission",
@@ -152,11 +152,11 @@
       "lat": 37.7599,
       "lon": -122.4148,
       "fog_score": 0.0,
-      "visibility_m": 26500.0,
-      "cloud_cover": 99,
-      "humidity": 60,
-      "temperature": 22.6,
-      "dew_point": 14.4
+      "visibility_m": 27000.0,
+      "cloud_cover": 100,
+      "humidity": 61,
+      "temperature": 21.6,
+      "dew_point": 13.8
     },
     {
       "id": "glen_park",
@@ -164,11 +164,11 @@
       "lat": 37.7338,
       "lon": -122.4337,
       "fog_score": 0.0,
-      "visibility_m": 19100.0,
-      "cloud_cover": 92,
-      "humidity": 73,
-      "temperature": 20.0,
-      "dew_point": 15.0
+      "visibility_m": 18900.0,
+      "cloud_cover": 100,
+      "humidity": 75,
+      "temperature": 19.2,
+      "dew_point": 14.7
     },
     {
       "id": "bernal_heights",
@@ -176,11 +176,11 @@
       "lat": 37.739,
       "lon": -122.4159,
       "fog_score": 0.0,
-      "visibility_m": 25500.0,
+      "visibility_m": 24700.0,
       "cloud_cover": 100,
-      "humidity": 63,
-      "temperature": 22.0,
-      "dew_point": 14.7
+      "humidity": 64,
+      "temperature": 21.0,
+      "dew_point": 14.0
     },
     {
       "id": "potrero_hill",
@@ -188,11 +188,11 @@
       "lat": 37.7576,
       "lon": -122.4007,
       "fog_score": 0.0,
-      "visibility_m": 26500.0,
-      "cloud_cover": 99,
-      "humidity": 60,
-      "temperature": 22.1,
-      "dew_point": 14.0
+      "visibility_m": 27000.0,
+      "cloud_cover": 100,
+      "humidity": 61,
+      "temperature": 21.1,
+      "dew_point": 13.3
     },
     {
       "id": "soma",
@@ -200,11 +200,11 @@
       "lat": 37.7785,
       "lon": -122.4056,
       "fog_score": 0.0,
-      "visibility_m": 26500.0,
-      "cloud_cover": 99,
-      "humidity": 60,
-      "temperature": 22.6,
-      "dew_point": 14.5
+      "visibility_m": 27000.0,
+      "cloud_cover": 100,
+      "humidity": 61,
+      "temperature": 21.6,
+      "dew_point": 13.8
     },
     {
       "id": "financial",
@@ -212,11 +212,11 @@
       "lat": 37.7946,
       "lon": -122.3999,
       "fog_score": 0.0,
-      "visibility_m": 22600.0,
-      "cloud_cover": 97,
-      "humidity": 66,
-      "temperature": 21.5,
-      "dew_point": 14.9
+      "visibility_m": 23800.0,
+      "cloud_cover": 100,
+      "humidity": 67,
+      "temperature": 20.8,
+      "dew_point": 14.4
     },
     {
       "id": "north_beach",
@@ -224,11 +224,11 @@
       "lat": 37.806,
       "lon": -122.4103,
       "fog_score": 0.0,
-      "visibility_m": 22600.0,
-      "cloud_cover": 97,
-      "humidity": 66,
-      "temperature": 21.5,
-      "dew_point": 14.9
+      "visibility_m": 23800.0,
+      "cloud_cover": 100,
+      "humidity": 67,
+      "temperature": 20.8,
+      "dew_point": 14.4
     },
     {
       "id": "bayview",
@@ -236,23 +236,23 @@
       "lat": 37.7299,
       "lon": -122.389,
       "fog_score": 0.0,
-      "visibility_m": 25500.0,
+      "visibility_m": 24700.0,
       "cloud_cover": 100,
-      "humidity": 63,
-      "temperature": 22.3,
-      "dew_point": 15.0
+      "humidity": 64,
+      "temperature": 21.3,
+      "dew_point": 14.3
     },
     {
-      "id": "excelsior",
-      "name": "Excelsior",
-      "lat": 37.7244,
-      "lon": -122.4244,
-      "fog_score": 0.0,
-      "visibility_m": 19100.0,
-      "cloud_cover": 92,
-      "humidity": 73,
-      "temperature": 19.5,
-      "dew_point": 14.5
+      "id": "lake_merced",
+      "name": "Lake Merced",
+      "lat": 37.728,
+      "lon": -122.49,
+      "fog_score": 0.206,
+      "visibility_m": 12200.0,
+      "cloud_cover": 100,
+      "humidity": 93,
+      "temperature": 16.7,
+      "dew_point": 15.6
     }
   ]
 }
